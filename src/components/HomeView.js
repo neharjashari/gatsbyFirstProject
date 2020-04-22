@@ -5,7 +5,7 @@ import Grid from "@material-ui/core/Grid"
 import Typography from "@material-ui/core/Typography"
 import { makeStyles } from "@material-ui/core/styles"
 import Container from "@material-ui/core/Container"
-import img from "../images/image-4.jpg"
+import img from "../images/image-1.jpg"
 
 const backgroundImg = {
   backgroundImage: `url(${img})`,
@@ -13,7 +13,6 @@ const backgroundImg = {
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",
-  boxShadow: "inset  0 0 5rem -2rem lightgrey",
 }
 
 const textStyle = {

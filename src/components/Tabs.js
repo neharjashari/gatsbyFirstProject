@@ -7,6 +7,7 @@ import DesktopWindowsIcon from "@material-ui/icons/DesktopWindows"
 import LaptopIcon from "@material-ui/icons/Laptop"
 import SmartphoneIcon from "@material-ui/icons/Smartphone"
 import TabletMacIcon from "@material-ui/icons/TabletMac"
+import Products from "./Products"
 
 const useStyles = makeStyles({
   root: {
@@ -21,24 +22,28 @@ export default function IconLabelTabs() {
 
   const handleChange = (event, newValue) => {
     setValue(newValue)
-    // console.log(newValue)
+    console.log("############################")
+    console.log(newValue)
   }
 
   return (
-    <Paper square className={classes.root}>
-      <Tabs
-        value={value}
-        onChange={handleChange}
-        variant="fullWidth"
-        indicatorColor="secondary"
-        textColor="secondary"
-        aria-label="icon label tabs example"
-      >
-        <Tab icon={<DesktopWindowsIcon />} label="DESKTOP" />
-        <Tab icon={<LaptopIcon />} label="LAPTOP" />
-        <Tab icon={<TabletMacIcon />} label="TABLET" />
-        <Tab icon={<SmartphoneIcon />} label="SMARTPHONE" />
-      </Tabs>
-    </Paper>
+    <>
+      <Paper square className={classes.root}>
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          variant="fullWidth"
+          indicatorColor="secondary"
+          textColor="secondary"
+          aria-label="icon label tabs example"
+        >
+          <Tab icon={<DesktopWindowsIcon />} label="DESKTOP" />
+          <Tab icon={<LaptopIcon />} label="LAPTOP" />
+          <Tab icon={<TabletMacIcon />} label="TABLET" />
+          <Tab icon={<SmartphoneIcon />} label="SMARTPHONE" />
+        </Tabs>
+      </Paper>
+      <Products category={value} />
+    </>
   )
 }
