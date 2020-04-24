@@ -1,6 +1,8 @@
 import React from "react"
 import Desktops from "./Products/Desktop"
 import Laptops from "./Products/Laptop"
+import Tablets from "./Products/Tablet"
+import Smartphones from "./Products/Smartphone"
 
 const Products = props => {
   switch (props.category) {
@@ -12,17 +14,13 @@ const Products = props => {
       return <Laptops />
       break
 
-    // case 2:
-    //   return (
+    case 2:
+      return <Tablets />
+      break
 
-    //     );
-    //   break
-
-    // case 3:
-    //   return (
-
-    //     );
-    //   break
+    case 3:
+      return <Smartphones />
+      break
 
     default:
       return (
